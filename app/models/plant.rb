@@ -1,5 +1,5 @@
 class Plant < ApplicationRecord
   belongs_to :user
-  has_many :plant_libraries, dependent: :destroy
+  belongs_to :plant_library
   acts_as_favoritable
 end
