@@ -7,6 +7,7 @@ ruby '2.6.3'
 gem 'rails', '~> 5.2.4'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
+gem 'acts_as_favoritor'
 
 gem 'pg', '~> 0.21'
 # Use Puma as the app server
