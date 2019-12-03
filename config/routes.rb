@@ -24,4 +24,10 @@ post '/login', to: 'login#login'
       end
     end
   end
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :plant_libraries, only: [:index, :show]
+    end
+  end
 end
