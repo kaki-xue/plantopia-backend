@@ -21,7 +21,7 @@ class Api::V1::MessagesController < Api::V1::BaseController
 
   private
 
-  def params_plantchat
+  def params_message
     params.require(:message).permit(:is_user, :text)
   end
 
