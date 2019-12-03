@@ -10,7 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_023617) do
+ActiveRecord::Schema.define(version: 2019_12_03_032247) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "messages", force: :cascade do |t|
+    t.boolean "is_user"
+    t.string "text"
+    t.bigint "plant_chat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plant_chat_id"], name: "index_messages_on_plant_chat_id"
+  end
+
+  create_table "plant_chats", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "plant_id"
+    t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plant_id"], name: "index_plant_chats_on_plant_id"
+    t.index ["user_id"], name: "index_plant_chats_on_user_id"
+  end
+
+  create_table "plants", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "nickname"
+    t.string "image"
+    t.integer "water_frequency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_plants_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "open_id"
@@ -18,4 +50,8 @@ ActiveRecord::Schema.define(version: 2019_12_03_023617) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "messages", "plant_chats"
+  add_foreign_key "plant_chats", "plants"
+  add_foreign_key "plant_chats", "users"
+  add_foreign_key "plants", "users"
 end
