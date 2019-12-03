@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  latin_name: MyString
+  average_height: MyString
+  light_preference: MyString
+  water_freq_avg: 1
+  name: MyString
+  plant: one
+
+two:
+  latin_name: MyString
+  average_height: MyString
+  light_preference: MyString
+  water_freq_avg: 1
+  name: MyString
+  plant: two
