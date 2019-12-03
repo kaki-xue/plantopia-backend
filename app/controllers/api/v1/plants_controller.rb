@@ -2,12 +2,10 @@ class Api::V1::PlantsController < Api::V1::BaseController
 
   def index
     @plants = Plant.all
-    render json: @plants
   end
 
   def show
     @plant = Plant.find(params[:id])
-    render json: @plants
   end
 
   def create
@@ -35,5 +33,10 @@ class Api::V1::PlantsController < Api::V1::BaseController
 
   def plant_params
     params.require(:plant).permit(:nickname, :image, :water_frequency)
+  end
+
+  def render_error
+    render json: { errors: @user.errors.full_messages },
+    status: :unprocessable_entity
   end
 end
