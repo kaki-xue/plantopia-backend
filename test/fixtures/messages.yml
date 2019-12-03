@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_user: false
+  text: MyString
+  plant_chat: one
+
+two:
+  is_user: false
+  text: MyString
+  plant_chat: two
