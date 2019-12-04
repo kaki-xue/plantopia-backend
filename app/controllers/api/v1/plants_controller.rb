@@ -36,7 +36,7 @@ class Api::V1::PlantsController < Api::V1::BaseController
   private
 
   def plant_params
-    params.require(:plant).permit(:nickname, :image, :water_frequency, :description, :name)
+    params.require(:plant).permit(:nickname, :image, :water_frequency, :description, :name, :plant_library_id)
   end
 
   def render_error
