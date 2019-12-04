@@ -14,7 +14,10 @@ class Api::V1::PlantsController < Api::V1::BaseController
     @plant = Plant.new(plant_params)
     @plant.user_id = @user.id
     if @plant.save
-      render :show, status: :created
+      # render :show, status: :created
+      render json: {
+        msg: 'Succesful'
+      }
     else
       render_error
     end
