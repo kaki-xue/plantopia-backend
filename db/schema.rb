@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2019_12_04_032723) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "plant_library_id"
+    t.string "description"
     t.string "name"
     t.index ["plant_library_id"], name: "index_plants_on_plant_library_id"
     t.index ["user_id"], name: "index_plants_on_user_id"
