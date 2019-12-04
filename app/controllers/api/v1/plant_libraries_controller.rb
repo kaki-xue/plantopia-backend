@@ -9,13 +9,14 @@ class Api::V1::PlantLibrariesController < Api::V1::BaseController
  end
 
  def show
-  if params[:favoritable].nil? or params[:favoritable] == ""
-    @plant_library = PlantLibrary.find(params[:id])
-  else
-    @user = User.find(params[:user_id])
-    @plant = Plant.find(params[:plant_library_id])
-    @user.favorite(@plant)
-    @plant_library = PlantLibrary.find(params[:id])
+    if params[:favoritable].nil? or params[:favoritable] == ""
+      @plant_library = PlantLibrary.find(params[:id])
+    else
+      @user = User.find(params[:user_id])
+      @plant = Plant.find(params[:plant_library_id])
+      @user.favorite(@plant)
+      @plant_library = PlantLibrary.find(params[:id])
+    end
   end
 
 end

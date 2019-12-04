@@ -1,4 +1,5 @@
 class Api::V1::PlantsController < Api::V1::BaseController
+  skip_before_action :verify_authenticity_token
 
   def index
     @plants = Plant.all
@@ -13,7 +14,10 @@ class Api::V1::PlantsController < Api::V1::BaseController
     @plant = Plant.new(plant_params)
     @plant.user_id = @user.id
     if @plant.save
-      render :show, status: :created
+      # render :show, status: :created
+      render json: {
+        msg: 'Succesful'
+      }
     else
       render_error
     end
@@ -32,7 +36,7 @@ class Api::V1::PlantsController < Api::V1::BaseController
   private
 
   def plant_params
-    params.require(:plant).permit(:nickname, :image, :water_frequency)
+    params.require(:plant).permit(:nickname, :image, :water_frequency, :description, :name)
   end
 
   def render_error
