@@ -1,7 +1,11 @@
 class Api::V1::PlantsController < Api::V1::BaseController
 
   def index
-    @plants = Plant.all
+    if params[:user_id].nil?
+      ""
+    else
+      @plants = Plant.where(user_id: params[:user_id])
+    end
   end
 
   def show

@@ -50,8 +50,3 @@ puts "Cool you created #{PlantLibrary.count} plants! You rock Sarah"
 
 User.destroy_all
 
-sarah = User.new(open_id: 1)
-
-sarah.save
-
-puts "Great , you created #{User.count} user"
