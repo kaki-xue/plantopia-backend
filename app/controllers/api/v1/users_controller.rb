@@ -10,14 +10,14 @@ skip_before_action :verify_authenticity_token
     @user = User.find(params[:id])
   end
 
-  def create
-    @user = User.create(user_params)
-    if @user.save
-      render :show, status: :created
-    else
-      render_error
-    end
-  end
+  # def create
+  #   @user = User.create(user_params)
+  #   if @user.save
+  #     render :show, status: :created
+  #   else
+  #     render_error
+  #   end
+  # end
 
 
   def destroy
