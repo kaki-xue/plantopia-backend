@@ -5,29 +5,36 @@ post '/login', to: 'login#login'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :plants, only: [:index, :show, :update, :create, :destroy]
-    end
-  end
-
-  namespace :api, defaults: { format: :json } do
-    namespace :v1 do
+      # resources :plants, only: [:index, :show, :update, :create, :destroy]
+      resources :plant_libraries, only: [:index, :show]
+      resources :plant_chats, only: [:show, :create] do
+        resources :messages, only: [:index, :create, :show]
+      end
       resources :users, only: [:index, :show, :destroy] do
         resources :plants, only: [:index, :show, :destroy, :create, :update]
       end
     end
   end
 
-  namespace :api, defaults: { format: :json } do
-    namespace :v1 do
-      resources :plant_chats, only: [:show, :create] do
-        resources :messages, only: [:index, :create, :show]
-      end
-    end
-  end
+  # namespace :api, defaults: { format: :json } do
+  #   namespace :v1 do
+  #     resources :users, only: [:index, :show, :destroy] do
+  #       resources :plants, only: [:index, :show, :destroy, :create, :update]
+  #     end
+  #   end
+  # end
 
-  namespace :api, defaults: { format: :json } do
-    namespace :v1 do
-      resources :plant_libraries, only: [:index, :show]
-    end
-  end
+  # namespace :api, defaults: { format: :json } do
+  #   namespace :v1 do
+  #     resources :plant_chats, only: [:show, :create] do
+  #       resources :messages, only: [:index, :create, :show]
+  #     end
+  #   end
+  # end
+
+  # namespace :api, defaults: { format: :json } do
+  #   namespace :v1 do
+  #     resources :plant_libraries, only: [:index, :show]
+  #   end
+  # end
 end
