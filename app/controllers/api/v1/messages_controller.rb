@@ -1,4 +1,5 @@
 class Api::V1::MessagesController < Api::V1::BaseController
+skip_before_action :verify_authenticity_token
 
   def index
     @messages = Message.all
@@ -10,8 +11,6 @@ class Api::V1::MessagesController < Api::V1::BaseController
 
   def create
     @message = Message.new(params_message)
-    @plant_chat = PlantChat.find(params[:plant_chat_id])
-    @message.plant_chat_id = @plant_chat.id
      if @message.save
       render :show, status: :created
     else
@@ -22,7 +21,7 @@ class Api::V1::MessagesController < Api::V1::BaseController
   private
 
   def params_message
-    params.require(:message).permit(:is_user, :text)
+    params.require(:message).permit(:is_user, :text, :plant_chat_id)
   end
 
   def render_error
