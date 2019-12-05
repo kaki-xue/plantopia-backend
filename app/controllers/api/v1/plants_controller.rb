@@ -1,5 +1,7 @@
 class Api::V1::PlantsController < Api::V1::BaseController
+
 skip_before_action :verify_authenticity_token
+
   def index
     if params[:user_id].nil?
       ""
@@ -20,6 +22,7 @@ skip_before_action :verify_authenticity_token
     if @plant.save
       render json: {
         success: "successfully created"
+
       }
     else
       render_error
@@ -39,7 +42,9 @@ skip_before_action :verify_authenticity_token
   private
 
   def plant_params
+
     params.require(:plant).permit(:nickname, :image, :water_frequency, :user_id, :plant_library_id, :description, :name)
+
   end
 
   def render_error
