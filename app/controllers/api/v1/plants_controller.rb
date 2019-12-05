@@ -21,6 +21,7 @@ skip_before_action :verify_authenticity_token
     @plant.user_id = @user.id
     if @plant.save
 
+
       render json: {
         success: "successfully created"
 
