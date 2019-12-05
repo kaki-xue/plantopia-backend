@@ -1,6 +1,6 @@
 class Api::V1::PlantsController < Api::V1::BaseController
 
-  skip_before_action :verify_authenticity_token, only: :create
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
     # skip_before_action :verify_authenticity_token
 
   def index
