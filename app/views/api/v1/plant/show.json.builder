@@ -1,2 +1,2 @@
-json.extract! @plant, :id, :nickname, :image, :water_frequency
+json.extract! @plant, :user_id, :id, :nickname, :image, :water_frequency
 

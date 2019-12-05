@@ -47,3 +47,6 @@ ficus_tree = PlantLibrary.new(name: "Ficus Tree",water_freq_avg:5,description:"Y
 ficus_tree.save
 
 puts "Cool you created #{PlantLibrary.count} plants! You rock Sarah"
+
+User.destroy_all
+

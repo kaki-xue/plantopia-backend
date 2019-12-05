@@ -1,22 +1,29 @@
 class Api::V1::PlantsController < Api::V1::BaseController
-  skip_before_action :verify_authenticity_token
+
+skip_before_action :verify_authenticity_token
 
   def index
-    @plants = Plant.all
+    if params[:user_id].nil?
+      ""
+    else
+      @plants = Plant.where(user_id: params[:user_id])
+    end
   end
 
   def show
-    @plant = Plant.find(params[:id])
+   @plant = Plant.find(params[:id])
+
   end
 
   def create
-    @user = User.find(params[:user_id])
     @plant = Plant.new(plant_params)
+    @user = User.find(params[:user_id])
     @plant.user_id = @user.id
     if @plant.save
-      # render :show, status: :created
+
       render json: {
-        msg: 'Succesful'
+        success: "successfully created"
+
       }
     else
       render_error
@@ -36,7 +43,9 @@ class Api::V1::PlantsController < Api::V1::BaseController
   private
 
   def plant_params
-    params.require(:plant).permit(:nickname, :image, :water_frequency, :description, :name, :plant_library_id)
+
+    params.require(:plant).permit(:nickname, :image, :water_frequency, :user_id, :plant_library_id, :description, :name)
+
   end
 
   def render_error

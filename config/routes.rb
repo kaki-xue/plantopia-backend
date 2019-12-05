@@ -11,7 +11,7 @@ post '/login', to: 'login#login'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :users, only: [:index, :show, :create, :destroy] do
+      resources :users, only: [:index, :show, :destroy] do
         resources :plants, only: [:index, :show, :destroy, :create]
       end
     end
