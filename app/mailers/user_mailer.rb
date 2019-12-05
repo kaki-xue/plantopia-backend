@@ -8,6 +8,6 @@ class UserMailer < ApplicationMailer
   def welcome
     @user = params[:user]
 
-    mail to: "sarahwang47@gmail.com"
+    mail to: @user.email
   end
 end
