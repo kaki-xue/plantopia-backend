@@ -1,12 +1,12 @@
 class Api::V1::PlantChatsController < Api::V1::BaseController
-
+skip_before_action :verify_authenticity_token
   def show
     @plant_chat = PlantChat.find(params[:id])
   end
 
 
   def create
-    @plant_chat = PlantChat.new(params_plant_chat)
+    @plant_chat = PlantChat.find_or_create_by(user_id: params_plant_chat[:user_id], plant_id: params_plant_chat[:plant_id])
      if @plant_chat.save
       render :show, status: :created
     else
