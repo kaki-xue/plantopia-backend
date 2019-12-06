@@ -1,4 +1,5 @@
 class Api::V1::PlantLibrariesController < Api::V1::BaseController
+skip_before_action :verify_authenticity_token
 
  def index
    if params[:query].nil? or params[:query] == ""
@@ -19,4 +20,12 @@ class Api::V1::PlantLibrariesController < Api::V1::BaseController
     end
   end
 
-end
+  def favorite
+    @user = User.find(params[:user_id])
+    @plant_library = PlantLibrary.find(params[:plant_library_id])
+    @favorite = @user.favorite(@plant_library)
+     # redirect_to plant_library_path
+    end
+
+  end
+
