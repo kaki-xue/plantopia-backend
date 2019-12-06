@@ -8,6 +8,6 @@ class User < ApplicationRecord
 
   def send_welcome_email
     # UserMailer.with(user: self).welcome.deliver_later
-    UserMailer.welcome(self.id).delivery_later
+    UserMailer.welcome(self.id).deliver_later
   end
 end
