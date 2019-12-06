@@ -16,6 +16,8 @@ class Message < ApplicationRecord
     end
   end
 
+
+
   #  def perform_fake_job
 
   #   FakeJob.perform_later(self.id)
