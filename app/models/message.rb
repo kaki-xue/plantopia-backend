@@ -1,11 +1,18 @@
 class Message < ApplicationRecord
   # after_commit :perform_fake_job
-  after_commit :SayThankYou
+  after_commit :sayThankYou, :sayLater
+
   belongs_to :plant_chat
 
-  def SayThankYou
+  def sayThankYou
     if self.is_user == true && self.text == "Hey buddy, just watered ya!"
       RespondUserMsgJob.perform_later(self.plant_chat_id)
+    end
+  end
+
+  def sayLater
+    if self.is_user == true && self.text == "Hold on there, I'll water you later"
+      WaterMeLaterJob.perform_later(self.plant_chat_id)
     end
   end
 
