@@ -19,4 +19,12 @@ class Api::V1::PlantLibrariesController < Api::V1::BaseController
     end
   end
 
+  def favorite
+    @user = User.find(params[:user_id])
+    @plant_libraries = PlantLibrary.find(params[:id])
+    @favorite = @user.favorite(@plant)
+    @favorite.save
+
+  end
+
 end

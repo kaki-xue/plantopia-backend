@@ -12,6 +12,7 @@ post '/login', to: 'login#login'
       end
       resources :users, only: [:index, :show, :destroy] do
         resources :plants, only: [:index, :show, :destroy, :create, :update]
+        resources :plant_libraries, only: [:favorite]
       end
     end
   end
