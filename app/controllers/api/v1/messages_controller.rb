@@ -2,7 +2,11 @@ class Api::V1::MessagesController < Api::V1::BaseController
 skip_before_action :verify_authenticity_token
 
   def index
-    @messages = Message.all
+    # unless params[:plant_chat_id].nil? or params[:plant_chat_id] == ""
+      @messages = Message.where(plant_chat_id: params[:plant_chat_id])
+    # end
+
+    # @messages = Message.all
   end
 
   def show
