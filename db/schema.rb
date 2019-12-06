@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_05_064610) do
+ActiveRecord::Schema.define(version: 2019_12_06_040817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 2019_12_05_064610) do
     t.datetime "updated_at", null: false
     t.string "image"
     t.string "description"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_plant_libraries_on_user_id"
   end
 
   create_table "plants", force: :cascade do |t|
@@ -87,6 +89,7 @@ ActiveRecord::Schema.define(version: 2019_12_05_064610) do
   add_foreign_key "messages", "plant_chats"
   add_foreign_key "plant_chats", "plants"
   add_foreign_key "plant_chats", "users"
+  add_foreign_key "plant_libraries", "users"
   add_foreign_key "plants", "plant_libraries"
   add_foreign_key "plants", "users"
 end
