@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 PlantLibrary.destroy_all
 
-succulents = PlantLibrary.new(user_id: User.first.id ,name: "Succulent",water_freq_avg:10,description: "Never water your succulent if the soil is moist. Always let the soil get bone dry between waterings. That said, when you do water it, don't hold back. Flood the plant then let it drain and dry as fast as possible, like a desert storm. ",image: "https://images.unsplash.com/photo-1513358130276-442a18340285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80")
+succulents = PlantLibrary.new(name: "Succulent",water_freq_avg:10,description: "Never water your succulent if the soil is moist. Always let the soil get bone dry between waterings. That said, when you do water it, don't hold back. Flood the plant then let it drain and dry as fast as possible, like a desert storm. ",image: "https://images.unsplash.com/photo-1513358130276-442a18340285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80")
 succulents.save
 
 aloe = PlantLibrary.new(name: "Aloe plant",water_freq_avg:10,description:"Aloe plants are succulents, so follow the same instructions listed above. ", image: "https://images.unsplash.com/photo-1480585532350-07e43e6eb63f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1059&q=80")

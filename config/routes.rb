@@ -18,8 +18,8 @@ post '/users/:user_id/plant_libraries/:plant_library_id', to: 'api/v1/plant_libr
     end
   end
 
-  #require "sidekiq/web"
+  require "sidekiq/web"
   # authenticate :user, lambda { |u| u.admin } do
-   # mount Sidekiq::Web => '/sidekiq'
+    mount Sidekiq::Web => '/sidekiq'
 
 end

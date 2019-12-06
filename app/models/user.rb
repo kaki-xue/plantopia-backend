@@ -4,9 +4,9 @@ class User < ApplicationRecord
   has_many :plant_libraries, dependent: :destroy
   acts_as_favoritor
 
-  # private
+  private
 
   def send_welcome_email
-    UserMailer.with(user: self).welcome.deliver_now
+    UserMailer.with(user: self).welcome.deliver_later
   end
 end
