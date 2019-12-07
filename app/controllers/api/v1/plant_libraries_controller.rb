@@ -35,8 +35,12 @@ skip_before_action :verify_authenticity_token
     @user = User.find(params[:user_id])
     @plant_library = PlantLibrary.find(params[:plant_library_id])
     @favorite = @user.favorite(@plant_library)
+    @favplants = @user.all_favorites.map do |fav|
+      PlantLibrary.find(fav.favoritable_id)
+      end
+
     render json: {
-      favorite: @user.all_favorites
+      favorite: @favplants
      # redirect_to plant_library_path
     }
     end
