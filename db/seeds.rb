@@ -7,46 +7,163 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 PlantLibrary.destroy_all
 
-succulents = PlantLibrary.new(name: "Succulent",water_freq_avg:10,description: "Never water your succulent if the soil is moist. Always let the soil get bone dry between waterings. That said, when you do water it, don't hold back. Flood the plant then let it drain and dry as fast as possible, like a desert storm. ",image: "https://images.unsplash.com/photo-1513358130276-442a18340285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80")
-succulents.save
+PlantLibrary.create(
+  water_freq_avg:7,
+  image:"https://cdn.pixabay.com/photo/2014/03/02/05/27/aloe-vera-277948_1280.jpg",
+  latin_name: "Aloe vera",
+  description:"Aloe vera is a very ornamental indoor plant, easy to care for and not demanding at any time during the year.Its leaves are original and elegant, and it is also used for its medicinal properties, especially in the field of cosmetics.",
+  family:"Liliaceae (lily family)",
+  average_height: "1 ⅓ to 3 feet (0.5 to 1 meter)",
+  light_preference:"well-lit, Aloe vera requires a good deal of light but doesn’t appreciate direct sunlight which tends to dehydrate the plant.",
+  soil:"soil mix + sand",
+  flowering:"March",
+  temperature:"The temperature of a house or apartment is perfect, because ideal temperatures range from 65 to 70° F (18 to 21° C) all year round.From May to September, you can bring your plant outdoors without any problems, but do bring it back inside in the evening if nights are cold.",
+  fertilizer:"No need to add fertilizer to your Aloe vera.",
+  watering:"Watering in spring and summer - Watering must be moderate but regular, more or less once a week. Best is to water when the surface of the soil has dried out.Don’t wait too long, especially if it is hot, because the plant could suffer from it; Watering in fall and winter - Slowly restrict watering during the dormant state.Wait for the soil to dry off to about an inch deep (a few centimeters) before watering again with lukewarm water. You’ll water again at a normal rhythm in spring, when the plant starts growing again.",
+  careinfo:"Once every 3 years at most, repot your Aloe vera in spring after the blooming."
+  )
 
-aloe = PlantLibrary.new(name: "Aloe plant",water_freq_avg:10,description:"Aloe plants are succulents, so follow the same instructions listed above. ", image: "https://images.unsplash.com/photo-1480585532350-07e43e6eb63f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1059&q=80")
-aloe.save
+ PlantLibrary.create(
+  water_freq_avg:"",
+  image:"https://images.unsplash.com/photo-1558705819-90e8cce44774?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2829&q=80",
+  latin_name: "Strelitzia reginaei",
+  description:"Strelitzia is a superb plant that comes from the tropics, boasting simply magnificent flowers and nicely dense leafage.",
+  family:"Strelitziaceae",
+  average_height: "3 to 6 ½ feet (1 to 2 meters)",
+  light_preference:"full sun, part sun",
+  soil:"it requires proper flower plant soil mix.rather moist soil, cool but well drained.",
+  flowering:"May to September.",
+  temperature:"Strelitzia is sensitive to frost, even light frost below 35°F (2°C) and thus can only be planted directly in the ground in regions with mild enough winters.It normally lives in the warmer regions of the globe that offer rather tropical growing conditions and must be grown in pots and brought indoors in winter if this isn’t the case.",
+  fertilizer:"",
+  watering:"In summer, when the weather is hot, it is important to water your strelitzia often, especially when grown in pots.",
+  careinfo:"If it was planted in the ground outdoors, it means your climate will allow for it, and so there isn’t much to do except to protect the plant if ever temperatures drop."
+  )
 
-peace = PlantLibrary.new(name: "Peace lily",water_freq_avg:6, description:"Water your Peace Lily when the soil is dry 2” deep. If the soil takes longer to dry out, it’s in too low light. Also, this plant tolerates moist soil.",image: "https://images.unsplash.com/photo-1567465645848-b765281eca3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=952&q=80")
-peace.save
 
-snake_plant = PlantLibrary.new(name: "Snake Plant",water_freq_avg:10, description:"Similar to succulents, snake plants should become completely dry between waterings. During waterings, flood the plant and allow it drain and dry quickly. Also, this desert plant can tolerate lower light, but prefers direct sun.", image: "https://images.unsplash.com/photo-1565626929866-e11c64e607cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
-snake_plant.save
+ PlantLibrary.create(
+  water_freq_avg:"",
+  image:"http://img5.imgtn.bdimg.com/it/u=3389406587,401482620&fm=15&gp=0.jpg",
+  latin_name: "Mandevilla sanderi",
+  description:"Mandevilla – some species of which are called Dipladenia – are remarkable climbing shrub vines.",
+  family:"Apocynceae or dogbane",
+  average_height: "Height – 10 feet long or tall (3 meters)
+",
+  light_preference:"well-lit,choose a very well-lit space for your flowering vines, but not in direct sunlight behind a window.",
+  soil:"well-drained",
+  flowering:"June to October",
+  temperature:"Temperatures of at least 68°F (20°C) are required for this plant to survive.Ideal temperatures are around 68 to 70° F (20 to 21° C) in summer, and 50 to 60°F (10 to 15°C) in winter.",
+  watering:"Water regularly but not too much, to avoid suffocating roots.",
+  careinfo:"Care for both Mandevilla and Dipladenia is almost identical. From planting to pruning and including watering, they should give you magnificent flowers in summer!")
 
-fiddle_leaf= PlantLibrary.new(name: "Fiddle Leaf",water_freq_avg:10,description:"Water your fiddle leaf fig when the soil is dry 2” deep. And FYI, this plant likes to get dried out by the sun.", image: " https://images.unsplash.com/photo-1507746212228-2d3645cbeb56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=595&q=80
-")
-fiddle_leaf.save
 
-spider_plant = PlantLibrary.new(name: "Spider Plant",water_freq_avg:6,description:"Water your spider plant when the soil is dry 2” deep.  This plant can tolerate moist soil. Like the peperomia, if it takes a while to dry out, it's not getting enough sunlight. ", image: "https://images.unsplash.com/photo-1524492367108-d2f94fdd0db0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
-spider_plant.save
 
-calathea = PlantLibrary.new(name: "Calathea",water_freq_avg:7,description:"Water your Calathea when the soil is dry 2” deep. Never mist this plantit's prone to foliar infections. It can, however, stand moist soil. Again, if it takes a while to dry out, it needs more light. ", image: "https://images.unsplash.com/photo-1491147334573-44cbb4602074?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80")
-calathea.save
 
-citrus_tree = PlantLibrary.new(name: "Citrus Tree",water_freq_avg:6,description:"Citrus trees should be watered when the soil is completely dry 2” deep, or when they just start to wilt or the leaves begin to curl. If the soil takes longer to dry out, it’s in too low light or the wrong pot. Citrus roots like to dry out as fast as possible. For the best chance at keeping this plant alive, use a Terracotta pot. ", image: "https://images.unsplash.com/photo-1546066165-1976e440441b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
-citrus_tree.save
 
-orchid = PlantLibrary.new(name: "Orchid",water_freq_avg:5,description: "You should spritz your orchid daily, or every other day. Once a week, run warm water through your plant and let it soak for a few hours.  Pro tip: Orchids shouldn't be planted in sphagnum moss, it will rot them out. Use orchid bark mix instead. Lastly, this plant will thrive in a bathroom with windows. If yours does live in your bathroom, you can spritz it less often.",image: "https://images.unsplash.com/photo-1534885320675-b08aa131cc5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80
-")
-orchid.save
 
-rubber_plant = PlantLibrary.new(name: "Rubber Plant",water_freq_avg:5,description:"Rubber plants need more water when the soil is dry 2” deep.  They like to get dried out between waterings." ,image: "https://images.unsplash.com/photo-1512951670161-b5c6c632b00e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80")
-rubber_plant.save
 
-philodendron = PlantLibrary.new(name: "Philodendron",water_freq_avg:8,description:"Water your philodendron when the soil is dry 2” deep. If the soil takes longer to dry out, it’s in too low light.", image: "https://images.unsplash.com/photo-1510505751526-76254482fd38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=951&q=8")
-philodendron.save
 
-ficus_tree = PlantLibrary.new(name: "Ficus Tree",water_freq_avg:5,description:"You should water your ficus when the soil is dry 2” deep. This plant likes to be dried out by the sun. ", image: "https://images.unsplash.com/photo-1507746212228-2d3645cbeb56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=595&q=80
-")
-ficus_tree.save
 
-puts "Cool you created #{PlantLibrary.count} plants! You rock Sarah"
+
+# ----------
+ # PlantLibrary.create(
+#   water_freq_avg:"",
+#   image:"",
+#   latin_name: "",
+#   description:"",
+#   family:"",
+#   average_height: "",
+#   light_preference:"",
+#   soil:"",
+#   flowering:"",
+#   temperature:"",
+#   fertilizer:"",
+#   watering:"",
+#   careinfo:""
+#   )
+
+# -----------------
+             # "Zamioculcas zamiifolia",
+             # "Ficus elastica",
+             # "Cyclamen persicum",
+             # "Euphorbia pulcherrima",
+             # "Zygocactus truncatus",
+             # "Sedum rubrotinctum cv.'Aurora'",
+             # "Echinocactus grusonii",
+             # "Dracaena marginata",
+             # "Schefflera arboricola",
+             # "Crassula rogersii",
+             # "Collinia elegans",
+             # "Ficus microcarpa",
+             # "Kalanchoe blossfeldiana",
+             # "Sinningia speciosa",
+             # "Cyclamen persicum",
+             # "Clerodendrum speciosum",
+             # "Adenium obesum",
+
+             # "Tillandsia cyanea",
+             # "Dracaena sanderiana",
+             # "Calliandra haematocephala",
+             # "Echeveria secunda",
+             # "Dypsis lutescens",
+             # "Zygocactus truncatus",
+             # "Brunfelsia pauciflora",
+             # "Ficus microcarpa",
+             # "Hippeastrum vittatum",
+             # "Billbergia pyramidalis",
+
+             # "Anthurium andraeanum",
+             # "Clivia nobilis",
+             # "Sansevieria trifasciata var. laurentii",
+             # "Abutilon megapotamicum",
+             # "Begonia argenteo-guttata",
+             # "Dracaena fragrans",
+             # "Spathiphyllum floribundum",
+             # "Cymbidium faberi × hybridum",
+             # "Ananas comosus",
+             # "Ficus microcarpa",
+
+             # "Dypsis lutescens",
+             # "Euphorbia pulcherrima",
+             # "Hibiscus rosa-sinensis",
+             # "Hibiscus syriacus var. syriacus f. albus-plenus",
+             # "Dracaena fragrans",
+             # "Epipremnum aureum",
+             # "Monstera deliciosa",
+             # "Plumeria rubra",
+             # "Ficus benjamina",
+             # "Clivia miniata",
+
+             # "Strelitzia nicolai",
+             # "Nolina recurvata",
+             # "Dracaena sanderiana",
+             # "Billbergia pyramidalis",
+             # "Aphelandra Fittonia",
+             # "Codiaeum variegatum",
+             # "Tristellateia australasiae",
+             # "Gardenia jasminoides var. fortuniana",
+             # "Dieffenbachia picta",
+             # "Saintpaulia ionantha",
+
+             # "Aeschynanthus pulcher",
+             # "Philodendron selloum",
+             # "Coleus hybridus",
+             # "Chlorophytum comosum cv. medio-pictum",
+             # "Adenium obesum",
+             # "Agave sisalana",
+             # "Bellis perennis",
+             # "Stromanthe sanguinea",
+             # "Pilea peperomioides",
+             # "Caladium bicolor",
+
+             # "Iresine herbstii",
+             # "Phoenix loureiroi",
+             # "Calathea makoyana",
+             # "Cereus",
+             # "Primula sinensis",
+             # "Pachira aquatica",
+
+
+
 
 
 

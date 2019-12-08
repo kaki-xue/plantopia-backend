@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_06_040817) do
+ActiveRecord::Schema.define(version: 2019_12_08_085256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,13 @@ ActiveRecord::Schema.define(version: 2019_12_06_040817) do
     t.string "image"
     t.string "description"
     t.bigint "user_id"
+    t.string "family"
+    t.string "soil"
+    t.string "flowering"
+    t.string "careinfo"
+    t.string "temperature"
+    t.string "watering"
+    t.string "fertilizer"
     t.index ["user_id"], name: "index_plant_libraries_on_user_id"
   end
 
@@ -75,6 +82,7 @@ ActiveRecord::Schema.define(version: 2019_12_06_040817) do
     t.bigint "plant_library_id"
     t.string "description"
     t.string "name"
+    t.boolean "reminder"
     t.index ["plant_library_id"], name: "index_plants_on_plant_library_id"
     t.index ["user_id"], name: "index_plants_on_user_id"
   end

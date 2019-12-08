@@ -46,7 +46,7 @@ class Api::V1::PlantsController < Api::V1::BaseController
 
   def plant_params
 
-    params.require(:plant).permit(:nickname, :image, :water_frequency, :user_id, :plant_library_id, :description, :name)
+    params.require(:plant).permit(:nickname, :image, :water_frequency, :user_id, :plant_library_id, :description,:reminder, :name)
 
   end
 
