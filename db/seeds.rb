@@ -57,32 +57,136 @@ PlantLibrary.create(
   careinfo:"Care for both Mandevilla and Dipladenia is almost identical. From planting to pruning and including watering, they should give you magnificent flowers in summer!")
 
 
+ PlantLibrary.create(
+  water_freq_avg:4,
+  image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575829430047&di=0b87db3e94ef68f45dc0d957e34117a4&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201603%2F09%2F20160309213327_ktdCm.thumb.700_0.jpeg",
+  latin_name: "Cymbidium sinense",
+  description:"The growing and caring for a Cymbidium orchid is on par with the easiest of all orchids.",
+  family:"orchid",
+  average_height: "--",
+  light_preference:"In any case, select a luminous location but without any direct sun.",
+  soil:"They like exposing their feet to the air! Place this pot on a saucer layers with glass or plastic marbles which are kept moist.",
+  flowering:"Winter",
+  temperature:"The ideal temperature range is from 40°F to 50°F (18°C to 21°C).",
+  fertilizer:"Provide leaf plant fertilizer while your cymbidium is developing (leaf growth), most often from May to September.",
+  watering:"In spring and summer, you can water 2 times a week especially if the weather is hot.In winter, watering twice a month is enough.Cymbidium orchid cherishes moisture, and needs to be watered often but without forgetting that the root area must stay clear of water or the roots will rot.It is thus best to water abundantly and then let excess water drip off into a sink for example.",
+  careinfo:"--")
 
 
 
+  PlantLibrary.create(
+  water_freq_avg:15,
+  image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575830030734&di=baf05a16c28caab46a7ef3e609302a97&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201206%2F08%2F20120608214931_Sx2Zx.thumb.700_0.jpeg",
+  latin_name: "Crassula rogersii",
+  description:"Crassula is an indoor succulent plant family that displays surprising evergreen leafage. It shows up in more and more places for its very trendy ornamental value.",
+  family:"Crassulaceae",
+  average_height: "8 inches (20 cm)",
+  light_preference:"Exposure – well-lit,It requires a lot of sunlight.",
+  soil:"Soil – light, well-drained.The soil must stay rather nutrient-poor, no fertilizer is needed.",
+  flowering:"Flowering – summer",
+  temperature:"",
+  fertilizer:"Not needed",
+  watering:"Water as little as you dare because this is a plant that stores water in its leaves.During the blooming, 1 to 2 watering sessions a week, when the soil has dried well.",
+  careinfo:"You may repot your crassula just after having purchased it if you’ve purchased it when not in flower, but pots for this plant are usually designed for at least another two years of service before growing too small for the plant."
+  )
 
+# ---------------
+ PlantLibrary.create(
+  water_freq_avg:"",
+  image:"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2611817051,1817596078&fm=15&gp=0.jpg",
+  latin_name: "Dracaena marginata",
+  description:"Dracaena marginata, often thought to be a palm tree, is a truly magnificent indoor plant.",
+  family:"Family – Agavoideae (formerly Agavaceae)",
+  average_height: "Height – 3 to 6 ½ feet (1 to 2 meters)",
+  light_preference:"Exposure – very well-lit, or even full sun. Select a place for it near a window facing to the South or West in the Northern hemisphere, and North or West if you live in the Southern hemisphere.",
+  soil:"Soil – soil mix,Growing Dracaena marginata in a pot requires good soil mix that can be amended with ⅓ compost, if you’ve got some at hand.",
+  flowering:"",
+  temperature:"It grows best when surrounding temperatures hold at around 70 to 72°F (20 to 22°C) and requires very good light, even direct sunlight. In tropical climates, Dracaena marginata can grow very large!",
+  fertilizer:"More or less every two weeks during the growth phase (spring-summer-early fall), you can offer it liquid fertilizer, taking great care to moisten the soil mix beforehand.",
+  watering:"All year long, mist water on the leaves, preferably soft water.Watering must be regular but limited, in order to not suffocate the plant’s roots.Every 5 to 7 days is largely sufficient",
+  careinfo:"This season is also when to stop adding fertilizer, from October all the way to March and April."
+  )
 
+ PlantLibrary.create(
+  water_freq_avg:4,
+  image:"",
+  latin_name: "",
+  description:"",
+  family:"",
+  average_height: "",
+  light_preference:"",
+  soil:"",
+  flowering:"",
+  temperature:"",
+  fertilizer:"",
+  watering:"",
+  careinfo:""
+  )
 
-
-
-# ----------
  # PlantLibrary.create(
-#   water_freq_avg:"",
-#   image:"",
-#   latin_name: "",
-#   description:"",
-#   family:"",
-#   average_height: "",
-#   light_preference:"",
-#   soil:"",
-#   flowering:"",
-#   temperature:"",
-#   fertilizer:"",
-#   watering:"",
-#   careinfo:""
-#   )
+ #  water_freq_avg:,
+ #  image:"",
+ #  latin_name: "",
+ #  description:"",
+ #  family:"",
+ #  average_height: "",
+ #  light_preference:"",
+ #  soil:"",
+ #  flowering:"",
+ #  temperature:"",
+ #  fertilizer:"",
+ #  watering:"",
+ #  careinfo:""
+ #  )
 
-# -----------------
+  # PlantLibrary.create(
+ #  water_freq_avg:"",
+ #  image:"",
+ #  latin_name: "",
+ #  description:"",
+ #  family:"",
+ #  average_height: "",
+ #  light_preference:"",
+ #  soil:"",
+ #  flowering:"",
+ #  temperature:"",
+ #  fertilizer:"",
+ #  watering:"",
+ #  careinfo:""
+ #  )
+
+  # PlantLibrary.create(
+ #  water_freq_avg:"",
+ #  image:"",
+ #  latin_name: "",
+ #  description:"",
+ #  family:"",
+ #  average_height: "",
+ #  light_preference:"",
+ #  soil:"",
+ #  flowering:"",
+ #  temperature:"",
+ #  fertilizer:"",
+ #  watering:"",
+ #  careinfo:""
+ #  )
+
+  # PlantLibrary.create(
+ #  water_freq_avg:"",
+ #  image:"",
+ #  latin_name: "",
+ #  description:"",
+ #  family:"",
+ #  average_height: "",
+ #  light_preference:"",
+ #  soil:"",
+ #  flowering:"",
+ #  temperature:"",
+ #  fertilizer:"",
+ #  watering:"",
+ #  careinfo:""
+ #  )
+
              # "Zamioculcas zamiifolia",
              # "Ficus elastica",
              # "Cyclamen persicum",
