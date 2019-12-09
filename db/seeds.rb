@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 PlantLibrary.destroy_all
+Plant.destroy_all
 
 PlantLibrary.create(
   water_freq_avg:7,
@@ -24,8 +25,8 @@ PlantLibrary.create(
   )
 
  PlantLibrary.create(
-  water_freq_avg:5,
-  image:"https://images.unsplash.com/photo-1558705819-90e8cce44774?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2829&q=80",
+  water_freq_avg:7,
+  image:"https://images.pexels.com/photos/59872/strelitzia-blossom-bloom-flower-59872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   latin_name: "Strelitzia reginae",
   description:"Strelitzia is a superb plant that comes from the tropics, boasting simply magnificent flowers and nicely dense leafage.",
   family:"Strelitziaceae",
@@ -41,7 +42,7 @@ PlantLibrary.create(
 
 
  PlantLibrary.create(
-  water_freq_avg:7,
+  water_freq_avg: 7,
   image:"http://img5.imgtn.bdimg.com/it/u=3389406587,401482620&fm=15&gp=0.jpg",
   latin_name: "Mandevilla sanderi",
   description:"Mandevilla – some species of which are called Dipladenia – are remarkable climbing shrub vines.",
