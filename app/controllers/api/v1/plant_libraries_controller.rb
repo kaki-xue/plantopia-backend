@@ -32,7 +32,45 @@ skip_before_action :verify_authenticity_token
     @user = User.find(params[:user_id])
     @plant_library = PlantLibrary.find(params[:plant_library_id])
     @favorite = @user.favorite(@plant_library)
+    @favplants = @user.all_favorites.map do |fav|
+      PlantLibrary.find(fav.favoritable_id)
+      end
+
+    end
+
+    def myfav
+      @user = User.find(params[:user_id])
+      @plant_library = PlantLibrary.find(params[:plant_library_id])
+      @favplants = @user.all_favorites.map do |fav|
+      PlantLibrary.find(fav.favoritable_id)
+      end
+
+      render json: {
+      favorite: @favplants
      # redirect_to plant_library_path
+    }
+    end
+
+    def unfavorite
+      @user = User.find(params[:user_id])
+      @plant_library = PlantLibrary.find(params[:plant_library_id])
+      @unfav = @user.unfavorite(@plant_library)
+
+      # @user = User.find(params[:user_id])
+      # @plant_library = PlantLibrary.find(params[:plant_library_id])
+      # @favorite = @user.favorite(@plant_library)
+      # @favplants = @user.all_favorites.map do |fav|
+      #   PlantLibrary.find(fav.favoritable_id)
+      # end
+
+      # render json: {
+      #   favorite: @favplants
+      #  # redirect_to plant_library_path
+      # }
+
+      # @user = User.find(params[:user_id])
+      # @plant_library = PlantLibrary.find(params[:plant_library_id])
+      # @unfavorite = @user.unfavorite(@plant_library)
     end
 
   end
