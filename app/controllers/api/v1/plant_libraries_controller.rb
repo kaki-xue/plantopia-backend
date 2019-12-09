@@ -4,7 +4,7 @@ skip_before_action :verify_authenticity_token
  def index
   if params[:latin_name].nil? or params[:latin_name]==""
      if params[:query].nil? or params[:query] == ""
-         if params[:user_id].nil?
+        if params[:user_id].nil?
           @plant_libraries = PlantLibrary.all
         else
           @plant_libraries = PlantLibrary.where(user_id: params[:user_id])
