@@ -2,22 +2,19 @@ class Api::V1::PlantLibrariesController < Api::V1::BaseController
 skip_before_action :verify_authenticity_token
 
  def index
-   # if params[:query].nil? or params[:query] == ""
-   #   @plant_libraries = PlantLibrary.all
-   # else
-   #   @plant_libraries = PlantLibrary.search_by_name_and_latin_name(params[:query])
-   # end
-
-    if params[:query].nil? or params[:query] == ""
-      if params[:user_id].nil?
-        @plant_libraries = PlantLibrary.all
-      else
-        @plant_libraries = PlantLibrary.where(user_id: params[:user_id])
-      end
-    else
-      @plant_libraries = PlantLibrary.search_by_name_and_latin_name(params[:query])
-    end
-
+  if params[:latin_name].nil? or params[:latin_name]==""
+     if params[:query].nil? or params[:query] == ""
+         if params[:user_id].nil?
+          @plant_libraries = PlantLibrary.all
+        else
+          @plant_libraries = PlantLibrary.where(user_id: params[:user_id])
+        end
+     else
+       @plant_libraries = PlantLibrary.search_by_name_and_latin_name(params[:query])
+     end
+  else
+    @plant_libraries=PlantLibrary.where(latin_name:params[:latin_name])
+  end
  end
 
  def show

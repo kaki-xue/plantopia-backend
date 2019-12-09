@@ -1,1 +1,1 @@
-json.extract! @plant_library, :id, :name, :image, :latin_name, :average_height, :light_preference, :water_freq_avg, :description
+json.extract! @plant_library, :id, :name, :image, :latin_name, :average_height, :light_preference, :water_freq_avg, :description, :family, :soil, :flowering, :temperature, :fertilizer, :watering, :careinfo
