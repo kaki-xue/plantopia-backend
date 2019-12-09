@@ -24,9 +24,9 @@ PlantLibrary.create(
   )
 
  PlantLibrary.create(
-  water_freq_avg:"",
+  water_freq_avg:7,
   image:"https://images.unsplash.com/photo-1558705819-90e8cce44774?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2829&q=80",
-  latin_name: "Strelitzia reginaei",
+  latin_name: "Strelitzia reginae",
   description:"Strelitzia is a superb plant that comes from the tropics, boasting simply magnificent flowers and nicely dense leafage.",
   family:"Strelitziaceae",
   average_height: "3 to 6 ½ feet (1 to 2 meters)",
@@ -41,7 +41,7 @@ PlantLibrary.create(
 
 
  PlantLibrary.create(
-  water_freq_avg:"",
+  water_freq_avg:7,
   image:"http://img5.imgtn.bdimg.com/it/u=3389406587,401482620&fm=15&gp=0.jpg",
   latin_name: "Mandevilla sanderi",
   description:"Mandevilla – some species of which are called Dipladenia – are remarkable climbing shrub vines.",
