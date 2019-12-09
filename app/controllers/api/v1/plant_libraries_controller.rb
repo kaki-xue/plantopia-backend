@@ -2,7 +2,6 @@ class Api::V1::PlantLibrariesController < Api::V1::BaseController
 skip_before_action :verify_authenticity_token
 
  def index
-
   if params[:latin_name].nil? or params[:latin_name]==""
      if params[:query].nil? or params[:query] == ""
         if params[:user_id].nil?
@@ -33,7 +32,31 @@ skip_before_action :verify_authenticity_token
     @user = User.find(params[:user_id])
     @plant_library = PlantLibrary.find(params[:plant_library_id])
     @favorite = @user.favorite(@plant_library)
-     # redirect_to plant_library_path
+    @favplants = @user.all_favorites.map do |fav|
+      PlantLibrary.find(fav.favoritable_id)
+      end
+      render json: {
+        favorite: @favplants
+      }
+    end
+
+
+    def myfav
+        @user = User.find(params[:user_id])
+        # @plant_library = PlantLibrary.find(params[:plant_library_id])
+        @favplants = @user.all_favorites.map do |fav|
+        PlantLibrary.find(fav.favoritable_id)
+        end
+        render json: {
+        favorite: @favplants
+       }
+
+    end
+
+    def unfavorite
+      @user = User.find(params[:user_id])
+      @plant_library = PlantLibrary.find(params[:plant_library_id])
+      @unfav = @user.unfavorite(@plant_library)
     end
 
   end

@@ -24,8 +24,8 @@ class Api::V1::PlantsController < Api::V1::BaseController
 
 
       render json: {
-        success: "successfully created"
-
+        success: "successfully created",
+        plant_id: @plant.id
       }
     else
       render_error
