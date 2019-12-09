@@ -6,8 +6,17 @@ skip_before_action :verify_authenticity_token
 
 
   def create
-    @plant_chat = PlantChat.find_or_create_by(user_id: params_plant_chat[:user_id], plant_id: params_plant_chat[:plant_id])
-    render :show
+    @plant_chat = PlantChat.where(user_id: params_plant_chat[:user_id], plant_id: params_plant_chat[:plant_id])
+    if @plant_chat == []
+      @plant_chat = PlantChat.new(user_id: params_plant_chat[:user_id], plant_id: params_plant_chat[:plant_id])
+      @plant_chat.save
+      time = @plant_chat.plant.water_frequency
+      WaterMeOftenJob.set(wait: time.day).perform_later(@plant_chat.id)
+      render :show
+    else
+      @plant_chat = @plant_chat.first
+      render :show
+    end
   end
 
     private
