@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 post '/login', to: 'login#login'
 post '/users/:user_id/plant_libraries/:plant_library_id', to: 'api/v1/plant_libraries#favorite'
-get  '/users/:user_id/plant_libraries/:plant_library_id', to: 'api/v1/plant_libraries#myfav'
+get  '/users/:user_id/plant_libraries', to: 'api/v1/plant_libraries#myfav'
 delete '/users/:user_id/favorites/:plant_library_id', to: 'api/v1/plant_libraries#unfavorite'
 
   namespace :api, defaults: { format: :json } do
