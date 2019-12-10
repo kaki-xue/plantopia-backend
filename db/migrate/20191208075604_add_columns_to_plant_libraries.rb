@@ -7,6 +7,7 @@ class AddColumnsToPlantLibraries < ActiveRecord::Migration[5.2]
     add_column :plants, :reminder, :boolean
   end
 end
+
    # t.string "latin_name"
    #  t.string "average_height"
    #  t.string "light_preference"

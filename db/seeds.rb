@@ -8,6 +8,7 @@ csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 PlantLibrary.destroy_all
+Plant.destroy_all
 
 CSV.foreach(filepath, csv_options) do |row|
 PlantLibrary.create(
@@ -26,7 +27,9 @@ PlantLibrary.create(
   )
 end
 
+
 puts "i have created #{PlantLibrary.count} plants"
+
 
 #  PlantLibrary.create(
 #   water_freq_avg:5,
