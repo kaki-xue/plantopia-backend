@@ -13,6 +13,9 @@ class Api::V1::PlantsController < Api::V1::BaseController
 
   def show
    @plant = Plant.find(params[:id])
+   # render json: {
+   #  plant_library: @plant.plant_library
+   # }
 
   end
 

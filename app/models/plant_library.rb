@@ -1,6 +1,7 @@
 class PlantLibrary < ApplicationRecord
   has_many :plants, dependent: :destroy
-  belongs_to :user, class_name: "PlantLibrary",optional:true
+  # belongs_to :user, class_name: "PlantLibrary",optional:true
+   belongs_to :user, optional:true
   acts_as_favoritable
 
   include PgSearch::Model
