@@ -10,7 +10,7 @@ skip_before_action :verify_authenticity_token
           @plant_libraries = PlantLibrary.where(user_id: params[:user_id])
         end
      else
-       @plant_libraries = PlantLibrary.search_by_name_and_latin_name(params[:query])
+       @plant_libraries = PlantLibrary.search_by_name_and_latin_name_and_description_and_water_freq(params[:query])
      end
   else
     @plant_libraries=PlantLibrary.where(latin_name:params[:latin_name])

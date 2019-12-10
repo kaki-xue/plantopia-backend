@@ -5,8 +5,8 @@ class PlantLibrary < ApplicationRecord
   acts_as_favoritable
 
   include PgSearch::Model
-  pg_search_scope :search_by_name_and_latin_name,
-    against: [:name, :latin_name],
+  pg_search_scope :search_by_name_and_latin_name_and_description_and_water_freq,
+    against: [:name, :latin_name, :description, :water_freq_avg],
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
