@@ -12,7 +12,8 @@ skip_before_action :verify_authenticity_token
       @plant_chat = PlantChat.new(user_id: params_plant_chat[:user_id], plant_id: params_plant_chat[:plant_id])
       @plant_chat.save
       time = @plant_chat.plant.water_frequency
-      WaterMeOftenJob.set(wait: time.days).perform_later(@plant_chat.id)
+      # WaterMeOftenJob.set(wait: time.days).perform_later(@plant_chat.id
+      WaterMeOftenJob.set(wait: 15.seconds).perform_later(@plant_chat.id)
       render :show
     else
       @plant_chat = @plant_chat.first
