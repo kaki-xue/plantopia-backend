@@ -6,7 +6,7 @@ class Message < ApplicationRecord
 
   def sayThankYou
     if self.is_user == true && self.text == "Hey buddy, just watered ya!"
-      RespondUserMsgJob.perform_later(self.plant_chat_id)
+      RespondUserMsgJob.perform_now(self.plant_chat_id)
       time = self.plant_chat.plant.water_frequency
       WaterMeOftenJob.set(wait: time.days).perform_later(self.plant_chat_id)
     end
