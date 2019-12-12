@@ -13,6 +13,7 @@ Plant.destroy_all
 CSV.foreach(filepath, csv_options) do |row|
 PlantLibrary.create(
   water_freq_avg: row['water_freq_avg'].to_i,
+  name: row['name'],
   image:row['image'],
   latin_name:row['latinname'],
   description:row['description'],
