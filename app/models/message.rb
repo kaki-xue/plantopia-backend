@@ -14,8 +14,8 @@ class Message < ApplicationRecord
 
   def sayLater
     if self.is_user == true && self.text == "Hold on there, I'll water you later"
-      WaterMeLaterJob.set(wait: 5.seconds).perform_later(self.plant_chat_id)
-      WaterMeOftenJob.set(wait: 1.day).perform_later(self.plant_chat_id)
+      WaterMeLaterJob.perform_now(self.plant_chat_id)
+      WaterMeOftenJob.set(wait: 2.seconds).perform_later(self.plant_chat_id)
     end
   end
 

@@ -3,7 +3,7 @@ skip_before_action :verify_authenticity_token
 
   def index
     # unless params[:plant_chat_id].nil? or params[:plant_chat_id] == ""
-      @messages = Message.where(plant_chat_id: params[:plant_chat_id])
+      @messages = Message.where(plant_chat_id: params[:plant_chat_id]).order(created_at: :asc)
     # end
 
     # @messages = Message.all
